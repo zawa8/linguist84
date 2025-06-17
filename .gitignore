@@ -1,6 +1,15 @@
 # NPM
 .npmrc
 node_modules
+del
+**/del/
+*.zip
+*.gz
+**/*.zip
+**/*.tar.bz2
+**/*.tar.gz
+**/*.tar
+**/*.xpi
 
 # Editors
 .idea
