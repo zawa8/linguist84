@@ -1,0 +1,34 @@
+{
+  "extends": "stylelint-config-standard",
+  "plugins": [
+    "stylelint-no-unsupported-browser-features"
+  ],
+  "rules": {
+    "selector-class-pattern": null,
+    "no-descending-specificity": null,
+    "plugin/no-unsupported-browser-features": [
+      true,
+      {
+        "ignore": [
+          "css-resize",
+          "intrinsic-width",
+          "border-radius",
+          "css-animation",
+          "transforms2d"
+        ]
+      }
+    ]
+  },
+  "ignoreFiles": [
+    "**/*.ts",
+    "**/*.tsx",
+    "dist/**",
+    "examples/components-list/dist/**",
+    "src/theme/presets/**/*.css",
+    "src/components/primitives/Loader/**/*.*",
+    "src/polyfills/scrollfix/**/*.*",
+    "site/src/components/PageLayout/PageLayout.tsx",
+    "site/src/components/i18n.ts",
+    "site/src/components/theme.ts",
+  ]
+}

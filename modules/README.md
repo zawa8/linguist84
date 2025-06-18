@@ -1,0 +1,1 @@
+Custom translators moved to https://github.com/translate-tools/linguist-translators

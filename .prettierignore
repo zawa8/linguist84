@@ -1,0 +1,10 @@
+# directories
+node_modules
+/build
+/thirdparty
+
+# files
+*.d.ts
+*.html
+*.md
+package-lock.json

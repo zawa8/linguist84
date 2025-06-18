@@ -1,0 +1,15 @@
+# NPM
+.npmrc
+node_modules
+
+# Editors
+.idea
+.vscode
+debug.log
+
+# Build
+/build
+
+# Local files
+.ADB_DEVICE
+.local
