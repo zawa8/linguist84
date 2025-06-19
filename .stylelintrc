@@ -24,11 +24,6 @@
     "**/*.tsx",
     "dist/**",
     "examples/components-list/dist/**",
-    "src/theme/presets/**/*.css",
-    "src/components/primitives/Loader/**/*.*",
-    "src/polyfills/scrollfix/**/*.*",
-    "site/src/components/PageLayout/PageLayout.tsx",
-    "site/src/components/i18n.ts",
-    "site/src/components/theme.ts",
+    "src/theme/presets/**/*.css"
   ]
 }

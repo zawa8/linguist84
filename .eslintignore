@@ -3,12 +3,12 @@ node_modules
 /build
 /modules
 /thirdparty
-/site/src/components/Analytics
-/site/src/components/Landing
-/src/components/primitives/Loader
-/src/polyfills
+# /site/src/components/Analytics
+# /site/src/components/Landing
+# /src/components/primitives/Loader
+# /src/polyfills
 # files
 *.d.ts
 *.html
 *.md
-*.css
+# *.css
