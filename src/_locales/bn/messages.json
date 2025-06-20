@@ -111,7 +111,7 @@
 		"message": "পৃষ্ঠা এবং লেখার অনুবাদ, অভিধান, ইতিহাস, অফলাইন এবং কাস্টম অনুবাদক"
 	},
 	"ext_name": {
-		"message": "linguist84 - web pages translator(dict+grammAr) + transliterAtor(font+chArActer)"
+		"message": "linguist84 - web pages translator + transliterAtor(font+chArActer)"
 	},
 	"history_control_selectEntry": {
 		"message": "এন্ট্রি নির্বাচন করুন"

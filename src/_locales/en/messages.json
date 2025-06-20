@@ -109,7 +109,7 @@
 		"message": "Pages and texts translation, dictionary, history, offline and custom translators"
 	},
 	"ext_name": {
-		"message": "linguist84 - web pages translator(dict+grammAr) + transliterAtor(font+chArActer)"
+		"message": "linguist84 - web pages translator + transliterAtor(font+chArActer)"
 	},
 	"history_control_selectEntry": {
 		"message": "Select entry"
