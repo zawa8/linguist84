@@ -1,9 +1,9 @@
 {
 	"name": "browser-addon",
-	"version": "6.0.1",
-	"description": "Browser addon for fast translate text and pages",
+	"version": "6.0.2",
+	"description": "browser Addon for fast translAte text and pAges",
 	"license": "GPL-3.0",
-	"author": "Vitonsky <https://github.com/vitonsky>",
+	"author": "wiml <https://github.com/zawa8>",
 	"scripts": {
 		"test": "jest",
 		"test-fast": "TEST_FAST=true jest --maxWorkers=4",
