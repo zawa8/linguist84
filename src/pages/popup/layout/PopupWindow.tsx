@@ -14,7 +14,9 @@ import {
 } from 'react-elegant-ui/esm/components/TabsPanes/TabsPanes.bundle/desktop';
 import { cn } from '@bem-react/classname';
 
-import { Hsciifontpicker } from '../../../components/Hsciifontpicker';
+// import { Hsciifontpicker } from '../../../components/Hsciifontpicker';
+import { LocalFontPicker } from '../../../components/LocalFontPicker';
+
 import { Button } from '../../../components/primitives/Button/Button.bundle/desktop';
 import { Icon } from '../../../components/primitives/Icon/Icon.bundle/desktop';
 import { Loader } from '../../../components/primitives/Loader/Loader';
@@ -299,7 +301,7 @@ export const PopupWindow: FC<PopupWindowProps> = ({
 			<div className={cnPopupWindow('Header')}>
 				<div className={cnPopupWindow('Logo')}>
 					linguist84_8aiueohcg_4xvqj
-					<Hsciifontpicker />
+					<LocalFontPicker />
 					abcdefghijklmnopqrstuvwxyz__BCDGJKNQRSTZ__LYVWPF__AEHIMOUX
 				</div>
 				<div className={cnPopupWindow('HeaderMenu')}>
