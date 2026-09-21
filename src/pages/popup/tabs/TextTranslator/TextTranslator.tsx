@@ -2,7 +2,7 @@ import React, { FC, Ref, useCallback, useEffect, useMemo, useRef, useState } fro
 import ReactDOM from 'react-dom';
 import { useDelayCallback } from 'react-elegant-ui/esm/hooks/useDelayCallback';
 import { useImmutableCallback } from 'react-elegant-ui/esm/hooks/useImmutableCallback';
-import { hsciistr } from 'htrlib';
+import { hsciistr } from '@hscii/htrlib';
 import { cn } from '@bem-react/classname';
 
 import { DictionaryButton } from '../../../../components/controls/DictionaryButton/DictionaryButton';
@@ -164,14 +164,9 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 	const textStateContext = useRef(Symbol('TextContext'));
 	const translate = useCallback(() => {
 		const localContext = textStateContext.current;
-		//hscii
-		const hsciistrobz = new hsciistr(
-			hsciistr.from_dikt.ascii_and_indik,
-			hsciistr.tu_dikt.inglish,
-		);
 		const indiklcodes = ['hi', 'gu', 'pa', 'bn', 'si', 'or', 'kn', 'ml', 'te', 'ta'];
 		translateHook(userInput, from, to)
-			.then((response) => {
+			.then(async (response) => {
 				if (localContext !== textStateContext.current) {
 					return;
 				}
@@ -182,7 +177,15 @@ export const TextTranslator: FC<TextTranslatorProps> = ({
 					);
 				}
 				if (indiklcodes.includes(to)) {
-					response = hsciistrobz.setistr(response).duztr().ostrdict.inglish;
+					//hscii: htrlib >=1.1 duztr() is async
+					response = (
+						await new hsciistr(
+							hsciistr.phrom_dikt.e52u10,
+							hsciistr.tu_dikt.xi38,
+						)
+							.set_input(response)
+							.duztr()
+					).output.xi38;
 				}
 
 				setTranslation({

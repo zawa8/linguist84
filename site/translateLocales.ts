@@ -1,6 +1,6 @@
 import crypto from 'crypto';
 import { existsSync } from 'fs';
-import { hsciistr } from 'htrlib';
+import { hsciistr } from '@hscii/htrlib';
 import path from 'path';
 import { Scheduler } from '@translate-tools/core/scheduling/Scheduler';
 import { YandexTranslator } from '@translate-tools/core/translators/YandexTranslator';
@@ -9,19 +9,22 @@ import { readFile, writeFile } from 'fs/promises';
 import { languages } from './supportedLanguages';
 
 const translator = new Scheduler(new YandexTranslator());
-const hsciistrobz = new hsciistr(
-	hsciistr.from_dikt.ascii_and_indik,
-	hsciistr.tu_dikt.inglish,
-);
 const indiklcodes = ['hi', 'gu', 'pa', 'bn', 'si', 'or', 'kn', 'ml', 'te', 'ta'];
 const translateObject = async (value: any, from: string, to: string) => {
 	if (typeof value !== 'object' || value === null) {
 		if (typeof value === 'string') {
-			return translator.translate(value, from, to).then((translatedText) => {
+			return translator.translate(value, from, to).then(async (translatedText) => {
 				// TODO: search for not closed tags and panic or return original message
 				if (indiklcodes.includes(to)) {
-					translatedText = hsciistrobz.setistr(translatedText).duztr()
-						.ostrdict.inglish;
+					// fresh instance per call: duztr() is async in htrlib >=1.1
+					translatedText = (
+						await new hsciistr(
+							hsciistr.phrom_dikt.e52u10,
+							hsciistr.tu_dikt.xi38,
+						)
+							.set_input(translatedText)
+							.duztr()
+					).output.xi38;
 				}
 				return (translatedText as any)
 					.replaceAll('&lt;', '<')

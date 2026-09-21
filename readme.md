@@ -1,7 +1,7 @@
 linguist is x powerful browser ekstension dxt is rexdy to replace your feworite translesn serwice.
 
-1. in package.json htrlib and libhsciifp are dependencies.
-2. htrlib transliterates of indian languages from unicode to hscii.
+1. in package.json @hscii/htrlib and libhsciifp are dependencies.
+2. @hscii/htrlib transliterates of indian languages from unicode to hscii.
 4. libhsciifp prowides fontpicker for hscii based scripts for indixn lxnguxges.
 5. hscii npmjs packages url : https://www.npmjs.com/settings/hscii/packages
 

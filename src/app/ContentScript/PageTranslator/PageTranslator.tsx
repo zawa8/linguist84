@@ -1,6 +1,6 @@
 import React from 'react';
 import { Config as NodesTranslatorConfig, NodesTranslator } from 'domtranslator';
-import { hsciistr } from 'htrlib';
+import { hsciistr } from '@hscii/htrlib';
 
 import { ShadowDOMContainerManager } from '../../../lib/ShadowDOMContainerManager';
 import { translate } from '../../../requests/backend/translate';
@@ -60,11 +60,6 @@ export class PageTranslator {
 			}
 			localTranslateState.pending++;
 			this.translateStateUpdate();
-			//hscii
-			const hsciistrobz = new hsciistr(
-				hsciistr.from_dikt.ascii_and_indik,
-				hsciistr.tu_dikt.inglish,
-			);
 			const indiklcodes = [
 				'hi',
 				'gu',
@@ -79,13 +74,20 @@ export class PageTranslator {
 			];
 
 			return translate(text, from, to, { priority })
-				.then((translatedText) => {
+				.then(async (translatedText) => {
 					if (localContext === this.translateContext) {
 						localTranslateState.resolved++;
 					}
 					if (indiklcodes.includes(to)) {
-						translatedText = hsciistrobz.setistr(translatedText).duztr()
-							.ostrdict.inglish;
+						//hscii: fresh instance per call, duztr() is async in htrlib >=1.1
+						translatedText = (
+							await new hsciistr(
+								hsciistr.phrom_dikt.e52u10,
+								hsciistr.tu_dikt.xi38,
+							)
+								.set_input(translatedText)
+								.duztr()
+						).output.xi38;
 					}
 					return translatedText;
 				})
